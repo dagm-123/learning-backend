@@ -1,2 +1,15 @@
-hola = "Hola Mundo"
-print(hola)
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+""
+@app.get("/")
+def read_root():
+    return {"Hello": "World"} 
+
+
+@app.get("/saludar")
+def sumar():
+    return {"Hola": "Manuel Ramirez"}
